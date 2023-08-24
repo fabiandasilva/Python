@@ -98,3 +98,99 @@ def cuenta (a):
     print(f"Cociente: {cociente} y resto: {resto}")
 
 cuenta(a) """
+
+""" 11. Obtener una palabra e imprimir los primeros 5 caracteres (pista: slicear la palabra). """
+
+""" entrada = str(input("Escribi tu palabra: "))
+
+def medir_longitud_palabra(entrada):  
+    entrada += "5"  
+    print(len(entrada))
+
+medir_longitud_palabra(entrada)
+ """
+
+
+
+
+
+""" 12. Obtener una palabra, borrarle todas las ‘a’ e imprimirla por pantalla (pista: usar una función predefinida
+de Python). """
+
+""" entrada = str(input("Escribi tu palabra: "))
+
+def borrar_a(entrada):
+    entrada = entrada.replace("a", "")
+    print(entrada)
+ 
+borrar_a(entrada) """
+
+ 
+
+
+""" Escribir la expresión para saber si un número es más grande que otro. Guardarla en una variable de tipo
+bool e imprimirla por pantalla para ver su valor. """
+
+""" valor1 = int(input("Escribi tu 1er numero: "))
+valor2 = int(input("Escribi tu 2do numero: "))
+variable_booleano = True
+
+def is_bigger(valor1, valor2, variable_booleano):
+    valor1 = valor1
+    valor2 = valor2
+    if valor1 > valor2:
+        print(f"El resultado es {variable_booleano}")
+    else:
+        print(False)
+ """
+ 
+ 
+""" def rel(a, b):
+     if a > b:
+         return True
+     else:
+         return False
+num1 = input("numero uno ")
+num2 = input("numero dos ")
+
+print(rel(num1, num2)) """
+     
+""" def es_mas_grande(numero1, numero2):
+    return numero1 > numero2
+
+# Obtener los números del usuario
+num1 = float(input("Ingresa el primer número: "))
+num2 = float(input("Ingresa el segundo número: "))
+
+# Obtener el resultado de la función
+resultado = es_mas_grande(num1, num2)
+
+# Imprimir el valor del resultado
+print("¿El número 1 es más grande que el número 2?", resultado)
+
+ """
+
+""" numero1 = float(input("Ingresa el primer número: "))
+numero2 = float(input("Ingresa el segundo número: "))
+
+def es_mas_grande(numero1, numero2):
+    if numero1 > numero2:
+        return True
+    else:
+        return False
+resultado = es_mas_grande(numero1, numero2)
+
+print(resultado) """
+
+
+""" 2. Repetir el punto anterior pero con la expresión que determina que una letra NO es vocal """
+""" letra = str(input("Ingrese una letra: "))
+
+def es_vocal(letra):
+    if letra == "a" or letra =="e" or letra =="o" or letra =="u" or letra =="i":
+        return True
+    else:
+        return False
+    
+print(es_vocal(letra)) """
+
