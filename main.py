@@ -184,6 +184,7 @@ print(resultado) """
 
 
 """ 2. Repetir el punto anterior pero con la expresión que determina que una letra NO es vocal """
+
 """ letra = str(input("Ingrese una letra: "))
 
 def es_vocal(letra):
@@ -194,3 +195,219 @@ def es_vocal(letra):
     
 print(es_vocal(letra)) """
 
+""" Repetir pero para la expresión que permite saber si un número es par y menor a 10. """
+
+""" numero = int(input("Ingrese un numero:"))
+
+def es_par_menor_10(numero):
+    if numero % 2 == 0 and numero < 10:
+        return print("Es par y menor a 10")
+    else:
+        return print("No es par o no es menor a 10")
+    
+es_par_menor_10(numero) """
+
+
+
+""" 4. Crear una función que dado un número, devuelva su valor absoluto. El valor absoluto de un número es
+el mismo número sin considerar el signo.
+Por ejemplo, el absoluto de 2 es 2 (|2| = 2) y el absoluto de -4 es 4 (|-4|=4). """
+
+
+""" numero = int(input("Ingrese un numero: "))
+def valor_absoluto(numero):
+    if numero < 0:
+        return numero * -1
+    else:
+        return numero
+
+print(valor_absoluto(numero)) """
+
+
+""" Crear el programa al que sea imposible ganarle en el juego de “Piedra, papel o tijera”. Cada elemento va
+a ser representado con una letra: R para piedra, P para papel y T para tijera.
+a. Hacer una función que le haga al usuario ingresar alguna de esas letras, e imprima por pantalla
+la jugada para ganarle. Por ejemplo:
+> ¡Juguemos! Ingresá piedra ( R), papel (P) o tijera (T)
+> P
+> Tijera. ¡Te gané!
+ATENCIÓN: Observar cómo se usa una frase inicial para darle a entender al usuario lo que tiene
+que hacer (en este caso ingresar alguna de las tres letras).
+b. Mostrar por pantalla el mensaje “NO vale” cuando el usuario ingresa una letra no válida
+(distinta de R, P o T). """
+
+""" juego = str(input("Ingrese piedra (R), papel (P) o tijera (T): "))
+
+def juego_piedra_papel_tijera(juego):
+    if juego == "R" or "r":
+        return   print("Papel, te gane!")
+    elif juego == "P" or "p":
+        return  print ("Tijera, te gane!")
+    elif juego == "T" or "t":
+        return print ("Piedra, te gane!")
+    else:
+        print("No vale!")
+
+juego_piedra_papel_tijera(juego) """
+
+
+
+""" 6. Escribir código que dado dos enteros, determine si la suma de ambos da menos que 100. Si la suma de
+ambos es menor a 100, calcular cuánto falta para llegar a 100 y mostrar por pantalla un mensaje con
+ese valor. Si la suma es mayor a 100, mostrar un mensaje diciendo “Llega a 100”.
+Extra: ¿Cómo harían para que el programa quede generalizado para cualquier límite, a elección del
+usuario, y no solo para 100?. """
+
+""" ingrese_primer_numero = int(input("Ingrese el primer número "))
+ingrese_segundo_numero = int(input("Ingrese el segundo número "))
+suma = ingrese_primer_numero + ingrese_segundo_numero
+limite = int(input("Establezca el limite "))
+
+def pasa_el_limite(suma, limite):
+    if suma > limite:
+        return print(f"La suma es {suma} y supera el limite ")
+    else:
+        return print(f"La suma es {suma} y no supera el limite ")
+
+pasa_el_limite(suma, limite) """
+
+#7. Se tienen letras para representar las estaciones del año:
+#● V para verano
+#● O para otoño
+#● I para invierno
+#● P para primavera
+#Crear una función que dada una letra, imprima por pantalla la estación del año que representa (es
+#decir, si se ingresa V se mostrará por pantalla el mensaje “Verano”). En caso de no representar a
+#ninguna estación mostrar un mensaje que diga “error”. Probar la función creada llamándola con A, P, O,
+#B, V e I
+
+
+""" letras = str(input("Ingrese una letra V, O, I o P: "))
+
+def estacion_del_anio(letras):
+    letras = letras.upper()
+    if letras == "V":
+    elif letras == "O":
+        return print("Estas en la estacion de Otoño ")
+    elif letras =="I":
+        return print("Estas en la estacion Invierno ")
+    elif letras =="P":
+        return print("Estas en la estacion de Primavera ")
+    else:
+        return print("Por favor ingresa alguna de las opciones") 
+    
+
+estacion_del_anio(letras) """
+
+""" Estructuras de control iterativas """
+
+""" 8. Se quiere hacer un programa para enseñar a unos niños a contar. Crear una función que reciba un
+número entero e imprima por pantalla los números del 1 hasta ese número con la estructura de control
+iterativa for. """
+    
+    
+""" numero_inicial = int(input("Ingrese un numero: "))
+
+for numero in range(numero_inicial, 10):
+    print(numero) """
+
+""" 9. Se quiere mejorar el programa para enseñar matemáticas pensado en el ejercicio anterior. Ahora se
+necesita una funcionalidad que permita a los niños aprender las tablas. Crear una función que reciba un
+número entero e imprima por pantalla la tabla de ese número del 1 al 10. """
+
+""" numero = int(input("Ingrese un numero y aprendamos la tabla de multiplicar: "))
+
+def tabla_de_multiplicar(numero):
+    for factor in range(1, 11):
+        resultado = numero * factor
+        print(f"{numero} x {factor} = {resultado}")
+        
+        
+tabla_de_multiplicar(numero) """
+
+
+
+""" 10. Crear una función que simule un cumpleaños: que dado un entero imprima “Que los cumplas feliz” esa
+cantidad de veces. """
+
+""" cantemos =int(input("Ingrese la cantidad de veces que quiere que cantemos: "))
+
+def cantemos_cumple(cantemos):
+    for cancion in range(1, cantemos):
+        print("Que los cumplas feliz")
+
+cantemos_cumple(cantemos)  """
+
+
+""" 11. En un almacén están buscando la forma de hacer los cobros más automáticamente. Para esto, se nos
+pide crear una función que reciba un número entero que representa lo que hay que cobrar, le pida al
+usuario ingresar un monto, y se vaya mostrando por pantalla cuánto falta para completar el pago.
+Repetir este proceso hasta que la deuda sea 0 o menor. Por ejemplo, si se recibe el monto 30: """
+    
+""" precio_pagar = int(input("Ingrese el precio a pagar: "))
+monto = int(input("Ingrese el monto: "))
+deuda = precio_pagar - monto
+
+def cobrar(monto, deuda):
+    while deuda > 0:
+        print(f"Debe pagar {deuda}")
+        monto = int(input("Ingrese el monto: "))
+        deuda = deuda - monto
+    print("Gracias por su compra")
+
+cobrar(precio_pagar, monto, deuda)  """
+
+""" 12. Escribir código que recorra los números del 1 al 20 y determine para cada uno si es par o impar,
+imprimiendo un mensaje por pantalla en cada caso. Es decir, el output esperado sería: """
+    
+""" for i in range(1, 21):
+  if i % 2 == 0:
+       print(f"{i} Es par ")
+  else:
+       print(f"{i} No es par ") """
+
+""" 13. Se tiene una máquina de sacar juguetes que funciona cuando se ingresa una determinada cantidad de
+fichas, y se quiere hacer una función que imite ese comportamiento.
+
+a. Hacer una función que reciba un número que represente el precio de la máquina, e imprima
+por pantalla “Ingresá x fichas para comenzar” hasta que se hayan ingresado esa cantidad de
+letras F (que representan una ficha), y luego “¡A jugar!” cuando se hayan ingresado todas las
+fichas necesarias. Por ejemplo, si la función recibe 3, debería tener el siguiente
+comportamiento: """
+
+
+
+""" precio_maquina = int(input("Ingrese el precio de la maquina: "))
+
+
+def juego(precio_maquina):
+    ficha_ingresada = 0
+    while precio_maquina > ficha_ingresada:
+        ficha  = input("Ingrese una ficha (F)")
+        if ficha.upper() == "F":
+            ficha_ingresada +=1
+            fichas_restantes = ficha_ingresada - precio_maquina
+            print(f"Faltan {fichas_restantes} para comenzar")
+        else:
+            print("Por favor solamente ingrese fichas reales (F)")            
+    print("A jugar!")
+
+juego(precio_maquina) """
+        
+ 
+
+""" 14. Crear una función que reciba un número entero e imprima los números primos entre 0 y el número
+ingresado. """
+    
+    
+""" numero = int(input("Ingrese un numero: "))
+
+def numeros_primos(numero):
+    for i in range (0, numero):
+        if numero % numero and numero % 1:
+            print(f"{i} es primo")
+        else:
+            print("No es primo")
+        
+numeros_primos(numero) """
+        
