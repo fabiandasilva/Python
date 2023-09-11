@@ -400,14 +400,101 @@ juego(precio_maquina) """
 ingresado. """
     
     
-""" numero = int(input("Ingrese un numero: "))
+""" def es_primo(numero):
+    if numero <= 1:
+        return False
+    if numero <= 3:
+        return True
+    if numero % 2 == 0 or numero % 3 == 0:
+        return False
+    i = 5
+    while i * i <= numero:
+        if numero % i == 0 or numero % (i + 2) == 0:
+            return False
+        i += 6
+    return True
 
-def numeros_primos(numero):
-    for i in range (0, numero):
-        if numero % numero and numero % 1:
-            print(f"{i} es primo")
-        else:
-            print("No es primo")
-        
-numeros_primos(numero) """
-        
+def numeros_primos_hasta_n(n):
+    for i in range(2, n + 1):
+        if es_primo(i):
+            print(i)
+            
+numero_ingresado = int(input("Ingrese un número entero: "))
+print(f"Números primos entre 0 y {numero_ingresado}:")
+numeros_primos_hasta_n(numero_ingresado)
+ """
+  
+  
+  
+#Familiarización con secuencias
+
+""" 1. Crear una lista con los números del 1 al 10. Acceder con el índice a la posición que contiene el número
+5, e imprimirlo por pantalla. Recordar que el índice de las listas empiezan con 0. """
+ 
+""" lista = [1,2,3,4,5,6,7,8,9,10] 
+print(lista[4]) """
+       
+""" 2. Con la lista del punto anterior, usar la función len() para averiguar su longitud, e imprimirla. """
+
+""" print(len(lista)) """
+
+
+""" Crear una secuencia con números distintos, y luego devolver el elemento máximo y el mínimo. """
+
+
+""" lista_numeros_random =[55, 20, 100, 1, 0, 99, 1000, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(max(lista_numeros_random))
+print(min(lista_numeros_random)) """
+
+
+
+""" 9. Una librería tiene un sistema que guarda los nombres de todos los libros que tienen en una lista de la
+siguiente forma: [“El principito”, “It”, “Sherlock Holmes”...]. Se quiere saber cuántos libros repetidos
+tienen. Hacer código que imprima para cada título, cuántos ejemplares hay.
+Aclaración: No se sabe la cantidad de elementos que tiene la lista, la lista nombrada es solo un ejemplo. """
+
+
+""" libreria = ["El principito", "It", "Sherlock Holmes", "It"]
+
+def libros_repetidos(libreria): 
+    for libro in libreria:
+        print(f"El libro {libro} se repite {libreria.count(libro)} veces")
+    
+libros_repetidos(libreria) """
+
+
+""" 10. Crear una lista que contenga los números del 1 al 10, luego recorrerla y guardar en otra lista esos
+números elevados al cuadrado. """
+
+
+""" lista = [1,2,3,4,5,6,7,8,9,10]
+
+def elevar_al_cuadrado(lista):
+    for numero in lista:
+        print(numero ** 2)
+
+elevar_al_cuadrado(lista) """
+
+""" 11. Se tiene la siguiente lista de palabras: [“entender”, “pueden”, “humanos”, “los”, “que”, “código”,
+“escriben”, ”programadores”, “buenos”, “Los”, “entiende.”, “computadora”, “una”, “que”, “código”,
+“escribe”, “tonto”, “Cualquier”]. Hacer una función que reciba una lista, y devuelva un string uniendo
+las palabras desde el final de la lista hasta el principio con un “ ” (espacio) entre cada una, para formar
+la frase. (ver funciones de listas y strings). """
+
+
+lista_palabras = ["entender", "pueden", "humanos", "los", "que", "código", "escriben", "programadores", "buenos", "Los", "entiende.", "computadora", "una", "que", "código", "escribe", "tonto", "Cualquier"]
+
+def unir_palabras(lista_palabras):
+    """ Utilizo el metodo reverse para invertir el orden de la lista """
+    lista_palabras.reverse()
+    print(lista_palabras)
+    """ Utilizo el metodo join para unir las palabras de la lista """
+    lista_palabras = " ".join(lista_palabras)
+    print(lista_palabras)
+    
+    
+    
+unir_palabras(lista_palabras)
+    
+    
