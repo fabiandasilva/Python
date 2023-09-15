@@ -482,19 +482,78 @@ elevar_al_cuadrado(lista) """
 las palabras desde el final de la lista hasta el principio con un “ ” (espacio) entre cada una, para formar
 la frase. (ver funciones de listas y strings). """
 
-
+""" 
 lista_palabras = ["entender", "pueden", "humanos", "los", "que", "código", "escriben", "programadores", "buenos", "Los", "entiende.", "computadora", "una", "que", "código", "escribe", "tonto", "Cualquier"]
 
 def unir_palabras(lista_palabras):
-    """ Utilizo el metodo reverse para invertir el orden de la lista """
+    
     lista_palabras.reverse()
     print(lista_palabras)
-    """ Utilizo el metodo join para unir las palabras de la lista """
+    
     lista_palabras = " ".join(lista_palabras)
     print(lista_palabras)
     
     
     
-unir_palabras(lista_palabras)
+unir_palabras(lista_palabras) """
     
     
+    
+    
+"""  13. Se tiene un ticket de supermercado que se puede representar como una lista de tuplas (producto,
+precio).
+a. Hacer una función que reciba la lista, calcule y devuelva el total que hay que pagar.
+b. Ahora se tienen dos tickets. Juntar ambos y volver a calcular el total. """
+
+    
+""" ticket = [("arroz", 100), ("fideos", 50), ("pan", 20), ("leche", 80), ("queso", 150)]
+
+def calculadora_de_productos(ticket):
+    total = 0
+    for productos in ticket:
+        total += productos[1]
+    print(f"El total a pagar es: {total}")
+
+calculadora_de_productos(ticket) """
+
+""" vocales = ["a", "e", "i", "o", "u"]
+
+letra = input("Ingrese una letra: ")
+
+def es_vocal(letra):
+    if letra in vocales:
+        return "Es una vocal"
+    else:
+       return print("No es una vocal")
+
+print(es_vocal(letra)) """
+
+""" 2. Hacer una función que reciba un string y que lo invierta. """
+
+""" palabra = str(input("Ingrese una palabra: "))
+
+def invertir_palabra(palabra):
+    palabra = palabra[::-1]
+    print(palabra)
+ """
+ 
+"""  3. Hacer una función que reciba dos strings, un string y un substring, es decir, que el primero contiene al
+segundo, se pide devolver el string habiendo eliminado el substring del mismo.
+Ejemplo:
+string: “Campeones del Mundo - 2022”
+substring: “2022”
+Una vez llamada a la """
+
+
+""" string = str(input("Ingrese una palabra: "))
+substring = str(input("Ingrese una palabra: "))
+
+def eliminar_substring(string, substring):
+   string = string.replace(substring, "")
+   print(string)
+
+
+eliminar_substring(string, substring)
+     """
+     
+     
